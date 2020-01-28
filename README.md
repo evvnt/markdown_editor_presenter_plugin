@@ -1,8 +1,6 @@
 # MarkdownEditorPresenterPlugin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/markdown_editor_presenter_plugin`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A plugin for [presenters](http://github.com/rx/presenters) that provides a Markdown based rich text area component. Utilizes [tui.editor](https://github.com/nhn/tui.editor) Javascript library.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Voom::Presenters.define(:demo) do
+  plugin :markdown_editor
+
+  content do 
+    markdown_editor name: :description, label: 'Description', placeholder: 'Details here...', rows: 15 do
+      value my_existing_value
+    end
+  end
+end
+```
 
 ## Development
 
