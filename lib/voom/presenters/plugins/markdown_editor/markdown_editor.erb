@@ -12,9 +12,7 @@
        <% if comp.disabled %>disabled<% end %>
        style="<%= 'width: 100%;' if comp.full_width %>">
   </div>
-  <div class="v-markdown-text-area--initial-value" style="display: none;">
-    <%= comp.value %>
-  </div>
+  <pre class="v-markdown-text-area--initial-value" style="display: none;"><%= comp.value %></pre>
   <span class="mdl-textfield__error <% if comp.error %> is-invalid<%end%>" ><%= comp.error || comp.hint%></span>
   <p id="<%= comp.id %>-input-helper-text" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" aria-hidden="true">
     <%= comp.error || comp.hint %>

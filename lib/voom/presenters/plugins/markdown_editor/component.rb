@@ -14,6 +14,11 @@ module Voom
             expand!
           end
 
+          def value(value=nil)
+            return @value if locked?
+            @value = value.gsub('\n', '<br>')
+          end
+
         end
       end
     end
